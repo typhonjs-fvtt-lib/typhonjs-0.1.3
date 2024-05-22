@@ -1,0 +1,283 @@
+{
+  "name": "@typhonjs-fvtt/runtime",
+  "version": "0.1.3",
+  "description": "Provides an integrated runtime library for Foundry VTT & Svelte.",
+  "license": "MPL-2.0",
+  "type": "module",
+  "author": "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)",
+  "contributors": [
+    "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)"
+  ],
+  "imports": {
+    "#runtime/*": "@typhonjs-fvtt/runtime/*",
+    "#svelte-fvtt/*": "@typhonjs-fvtt/runtime/svelte/*"
+  },
+  "exports": {
+    "./rollup": {
+      "types": "./.rollup/remote/index.d.ts",
+      "import": "./.rollup/remote/index.js"
+    },
+    "./color/colord": {
+      "types": "./_dist/color/colord/index.d.ts",
+      "import": "./_dist/color/colord/index.js"
+    },
+    "./color/colord/plugins/*": {
+      "types": "./_dist/color/colord/plugins/*.d.ts",
+      "import": "./_dist/color/colord/plugins/*.js"
+    },
+    "./data/compress": {
+      "types": "./_dist/data/compress/index.d.ts",
+      "import": "./_dist/data/compress/index.js"
+    },
+    "./data/format/base64": {
+      "types": "./_dist/data/format/base64/index.d.ts",
+      "import": "./_dist/data/format/base64/index.js"
+    },
+    "./data/format/json5": {
+      "types": "./_dist/data/format/json5/index.d.ts",
+      "import": "./_dist/data/format/json5/index.js"
+    },
+    "./data/format/msgpack": {
+      "types": "./_dist/data/format/msgpack/index.d.ts",
+      "import": "./_dist/data/format/msgpack/index.js"
+    },
+    "./data/format/msgpack/compress": {
+      "types": "./_dist/data/format/msgpack/compress/index.d.ts",
+      "import": "./_dist/data/format/msgpack/compress/index.js"
+    },
+    "./data/format/unicode": {
+      "types": "./_dist/data/format/unicode/index.d.ts",
+      "import": "./_dist/data/format/unicode/index.js"
+    },
+    "./data/struct/cache/quick-lru": {
+      "types": "./_dist/data/struct/cache/quick-lru/index.d.ts",
+      "import": "./_dist/data/struct/cache/quick-lru/index.js"
+    },
+    "./data/struct/hash/array": {
+      "types": "./_dist/data/struct/hash/array/index.d.ts",
+      "import": "./_dist/data/struct/hash/array/index.js"
+    },
+    "./data/struct/search/trie": {
+      "types": "./_dist/data/struct/search/trie/index.d.ts",
+      "import": "./_dist/data/struct/search/trie/index.js"
+    },
+    "./data/struct/search/trie/query": {
+      "types": "./_dist/data/struct/search/trie/query/index.d.ts",
+      "import": "./_dist/data/struct/search/trie/query/index.js"
+    },
+    "./math/gl-matrix": {
+      "types": "./_dist/math/gl-matrix/index.d.ts",
+      "import": "./_dist/math/gl-matrix/index.js"
+    },
+    "./math/interpolate": {
+      "types": "./_dist/math/interpolate/index.d.ts",
+      "import": "./_dist/math/interpolate/index.js"
+    },
+    "./math/physics": {
+      "types": "./_dist/math/physics/index.d.ts",
+      "import": "./_dist/math/physics/index.js"
+    },
+    "./math/util": {
+      "types": "./_dist/math/util/index.d.ts",
+      "import": "./_dist/math/util/index.js"
+    },
+    "./plugin/manager": {
+      "types": "./_dist/plugin/manager/index.d.ts",
+      "import": "./_dist/plugin/manager/index.js"
+    },
+    "./plugin/manager/eventbus": {
+      "types": "./_dist/plugin/manager/eventbus/index.d.ts",
+      "import": "./_dist/plugin/manager/eventbus/index.js"
+    },
+    "./plugin/manager/eventbus/buses": {
+      "types": "./_dist/plugin/manager/eventbus/buses/index.d.ts",
+      "import": "./_dist/plugin/manager/eventbus/buses/index.js"
+    },
+    "./security/client/dompurify": {
+      "types": "./_dist/security/client/dompurify/index.d.ts",
+      "import": "./_dist/security/client/dompurify/index.js"
+    },
+    "./svelte/action/animate": {
+      "types": "./_dist/svelte/action/animate/index.d.ts",
+      "import": "./_dist/svelte/action/animate/index.js"
+    },
+    "./svelte/action/dom": {
+      "types": "./_dist/svelte/action/dom/index.d.ts",
+      "import": "./_dist/svelte/action/dom/index.js"
+    },
+    "./svelte/animate": {
+      "types": "./_dist/svelte/animate/index.d.ts",
+      "import": "./_dist/svelte/animate/index.js"
+    },
+    "./svelte/application": {
+      "import": "./_dist/svelte/application/index.js"
+    },
+    "./svelte/application/dialog": {
+      "import": "./_dist/svelte/application/dialog/index.js"
+    },
+    "./svelte/application/legacy": {
+      "import": "./_dist/svelte/application/legacy/index.js"
+    },
+    "./svelte/component/core": {
+      "import": "./_dist/svelte/component/core/index.js"
+    },
+    "./svelte/component/dialog": {
+      "import": "./_dist/svelte/component/dialog/index.js"
+    },
+    "./svelte/gsap": {
+      "types": "./_dist/svelte/gsap/index.d.ts",
+      "import": "./_dist/svelte/gsap/index.js"
+    },
+    "./svelte/gsap/plugin/*": {
+      "import": "./_dist/svelte/gsap/plugin/*.js"
+    },
+    "./svelte/gsap/plugin/bonus/*": {
+      "import": "./_dist/svelte/gsap/plugin/bonus/*.js"
+    },
+    "./svelte/helper": {
+      "types": "./_dist/svelte/helper/index.d.ts",
+      "import": "./_dist/svelte/helper/index.js"
+    },
+    "./svelte/store/dom": {
+      "types": "./_dist/svelte/store/dom/index.d.ts",
+      "import": "./_dist/svelte/store/dom/index.js"
+    },
+    "./svelte/store/fvtt": {
+      "types": "./_dist/svelte/store/fvtt/index.d.ts",
+      "import": "./_dist/svelte/store/fvtt/index.js"
+    },
+    "./svelte/store/fvtt/document": {
+      "types": "./_dist/svelte/store/fvtt/document/index.d.ts",
+      "import": "./_dist/svelte/store/fvtt/document/index.js"
+    },
+    "./svelte/store/fvtt/settings": {
+      "types": "./_dist/svelte/store/fvtt/settings/index.d.ts",
+      "import": "./_dist/svelte/store/fvtt/settings/index.js"
+    },
+    "./svelte/store/position": {
+      "types": "./_dist/svelte/store/position/index.d.ts",
+      "import": "./_dist/svelte/store/position/index.js"
+    },
+    "./svelte/store/reducer": {
+      "types": "./_dist/svelte/store/reducer/index.d.ts",
+      "import": "./_dist/svelte/store/reducer/index.js"
+    },
+    "./svelte/store/reducer/array-object": {
+      "types": "./_dist/svelte/store/reducer/array-object/index.d.ts",
+      "import": "./_dist/svelte/store/reducer/array-object/index.js"
+    },
+    "./svelte/store/web-storage": {
+      "types": "./_dist/svelte/store/web-storage/index.d.ts",
+      "import": "./_dist/svelte/store/web-storage/index.js"
+    },
+    "./svelte/store/web-storage/msgpack": {
+      "types": "./_dist/svelte/store/web-storage/msgpack/index.d.ts",
+      "import": "./_dist/svelte/store/web-storage/msgpack/index.js"
+    },
+    "./svelte/store/writable-derived": {
+      "types": "./_dist/svelte/store/writable-derived/index.d.ts",
+      "import": "./_dist/svelte/store/writable-derived/index.js"
+    },
+    "./svelte/transition": {
+      "types": "./_dist/svelte/transition/index.d.ts",
+      "import": "./_dist/svelte/transition/index.js"
+    },
+    "./svelte/util": {
+      "types": "./_dist/svelte/util/index.d.ts",
+      "import": "./_dist/svelte/util/index.js"
+    },
+    "./tinymce": {
+      "types": "./_dist/tinymce/initializePlugins.d.ts",
+      "import": "./_dist/tinymce/initializePlugins.js"
+    },
+    "./util": {
+      "types": "./_dist/util/index.d.ts",
+      "import": "./_dist/util/index.js"
+    },
+    "./util/animate": {
+      "types": "./_dist/util/animate/index.d.ts",
+      "import": "./_dist/util/animate/index.js"
+    },
+    "./util/async": {
+      "types": "./_dist/util/async/index.d.ts",
+      "import": "./_dist/util/async/index.js"
+    },
+    "./util/browser": {
+      "types": "./_dist/util/browser/index.d.ts",
+      "import": "./_dist/util/browser/index.js"
+    },
+    "./util/object": {
+      "types": "./_dist/util/object/index.d.ts",
+      "import": "./_dist/util/object/index.js"
+    },
+    "./util/store": {
+      "types": "./_dist/util/store/index.d.ts",
+      "import": "./_dist/util/store/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "./_dist/svelte/application/index.js",
+    "./_dist/svelte/component/core/index.js",
+    "./_dist/svelte/gsap/plugin/*.js",
+    "./_dist/svelte/gsap/plugin/bonus/*.js",
+    "./_dist/tinymce/initializePlugins.js"
+  ],
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^15",
+    "@sveltejs/vite-plugin-svelte": "^2",
+    "autoprefixer": "^10",
+    "cssnano": "^6",
+    "postcss": "^8",
+    "postcss-preset-env": "^9",
+    "sass": "^1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25",
+    "@rollup/plugin-virtual": "^3",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@typhonjs-build-test/esm-d-ts": "^0.1.0",
+    "@typhonjs-fvtt/svelte": "github:typhonjs-fvtt-lib/svelte#0.1.2",
+    "@typhonjs-svelte/runtime-base": "github:typhonjs-svelte/runtime-base#0.1.1",
+    "@typhonjs-tinymce/oembed": "^0.4.0",
+    "@typhonjs-utils/file-util": "^0.0.10",
+    "colord-typhonjs": "github:typhonjs-svelte-scratch/colord#0.0.2",
+    "dompurify": "3.0.5",
+    "fs-extra": "^11",
+    "magic-string": "^0.30.0",
+    "rollup": "^3",
+    "rollup-plugin-postcss": "^4",
+    "rollup-plugin-svelte": "^7",
+    "upath": "^2"
+  },
+  "peerDependencies": {
+    "vite": ">=4.3.0",
+    "svelte": ">=4.x.x",
+    "svelte-preprocess": ">=5.0.0"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "rollup --config",
+    "prepublishOnly": "npm run build"
+  },
+  "homepage": "https://github.com/typhonjs-fvtt-lib/typhonjs#readme",
+  "keywords": [
+    "foundry vtt",
+    "fvtt",
+    "typhonjs",
+    "runtime",
+    "svelte"
+  ],
+  "files": [
+    "/.rollup/generatePlugin.js",
+    "/.rollup/postcssConfig.js",
+    "/.rollup/terserConfig.js",
+    "/.rollup/local/externalPathsLib.js",
+    "/.rollup/remote",
+    "/_dist"
+  ],
+  "repository": "github:typhonjs-fvtt-lib/typhonjs",
+  "bugs": "https://github.com/typhonjs-fvtt-lib/typhonjs/issues"
+}

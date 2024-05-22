@@ -1,0 +1,31 @@
+{
+  "id": "typhonjs",
+  "title": "TyphonJS Runtime Library",
+  "description": "Provides a common runtime library distributing: @typhonjs-fvtt/svelte, @typhonjs-plugin/manager, and DOMPurify.",
+  "authors": [
+    {
+      "name": "Michael Leahy (TyphonJS) - MLeahy#4299",
+      "url": "https://www.typhonjs.io",
+      "discord": "MLeahy#4299"
+    }
+  ],
+  "url": "https://github.com/typhonjs-fvtt-lib/typhonjs",
+  "readme": "https://github.com/typhonjs-fvtt-lib/typhonjs/blob/master/README.md",
+  "bugs": "https://github.com/typhonjs-fvtt-lib/typhonjs/issues",
+  "changelog": "https://github.com/typhonjs-fvtt-lib/typhonjs/releases/latest/",
+  "version": "0.1.3",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "12"
+  },
+  "scripts": [],
+  "styles": [
+    "./remote/svelte/component/core.css"
+  ],
+  "socket": false,
+  "manifest": "https://github.com/typhonjs-fvtt-lib/typhonjs/releases/latest/download/module.json",
+  "download": "https://github.com/typhonjs-fvtt-lib/typhonjs/releases/download/0.1.3/module.zip",
+  "protected": false,
+  "coreTranslation": false,
+  "library": true
+}
